@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "./pb";
+
+package proto;
+
+service TestService {
+  rpc GetById(TestRequest) returns (TestResponse);
+}
+
+message TestRequest {
+  string name = 1;
+}
+
+message TestResponse {
+  string message = 1;
+}

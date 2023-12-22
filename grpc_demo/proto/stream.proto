@@ -1,0 +1,21 @@
+// protoc --go_out=. --go-grpc_out=. stream.proto
+syntax = "proto3";
+
+option go_package =  "./pb";
+
+package proto;
+
+
+service StreamChat {
+  rpc Chat(stream RouteNote) returns (stream RouteNote) {}
+}
+
+message RouteNote {
+    Point location = 1;
+    string message = 2;
+}
+
+message Point {
+  int32 latitude = 1;
+  int32 longitude = 2;
+}

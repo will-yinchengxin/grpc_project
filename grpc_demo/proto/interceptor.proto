@@ -1,0 +1,18 @@
+// protoc --go_out=. --go-grpc_out=.  interceptor.proto
+syntax = "proto3";
+
+option go_package =  "./pb";
+
+package proto;
+
+service InterceptorService {
+  rpc Interceptor(InterceptorRequest) returns (InterceptorResponse);
+}
+
+message InterceptorRequest {
+  string name = 1;
+}
+
+message InterceptorResponse {
+  string message = 1;
+}

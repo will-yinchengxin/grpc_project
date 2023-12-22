@@ -1,0 +1,18 @@
+// protoc --go_out=. --go-grpc_out=. alts.proto
+syntax = "proto3";
+
+option go_package =  "./pb";
+
+package proto;
+
+service GreeterService {
+  rpc GetById(HelloRequest) returns (HelloResponse);
+}
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloResponse {
+  string message = 1;
+}

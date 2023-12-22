@@ -1,0 +1,32 @@
+{
+    "db": {
+        "host":"172.16.27.96",
+        "port":3306,
+        "userName":"will",
+        "password":"admin@123",
+        "dbName":"grpc_project"
+    },
+    "consul": {
+        "host":"127.0.0.1",
+        "port":8500
+    },
+    "jwt": {
+        "key": "Tds1KdX!kS=="
+    },
+    "app":{
+        "srvName":"advertise_srv",
+        "srvTag":[
+            "advertise_srv",
+            "grpc_srv"
+        ]
+    },
+    "productWeb":{
+        "srvName":"advertise_web",
+        "host":"0.0.0.0",
+        "port":9988,
+         "srvTag":[
+            "advertise_web",
+            "grpc_web"
+        ]
+    }
+}

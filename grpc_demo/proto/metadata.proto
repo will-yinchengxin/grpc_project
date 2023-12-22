@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package =  "./pb";
+
+package proto;
+
+service PassParam {
+  rpc SendParam(PassParamRequest) returns (PassParamResponse);
+}
+
+message PassParamRequest {
+  string name = 1;
+}
+
+message PassParamResponse {
+  string message = 1;
+}
